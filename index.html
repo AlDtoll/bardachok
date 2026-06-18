@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бардачок — кожевенное ремесло</title>
+    <meta name="description" content="Изделия из натуральной кожи ручной работы. Кошельки, сумки, ремни, ключницы на заказ. Кожевенное Ремесло Бардачок.">
+    <meta property="og:title" content="Бардачок — кожевенное ремесло">
+    <meta property="og:description" content="Изделия из натуральной кожи ручной работы. На заказ и в наличии.">
+    <meta property="og:image" content="photos/photo1.jpg">
+    <meta property="og:type" content="website">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --color: #92400e; --color-dark: #78350f; --color-light: #fef3c7; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1f2937; line-height: 1.6; }
+        .container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+        /* NAV */
+        nav { background: #1c1007; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+        .nav-brand { color: #f59e0b; font-size: 1.2rem; font-weight: 800; letter-spacing: 0.05em; text-decoration: none; }
+        .nav-cta { background: var(--color); color: white; padding: 8px 18px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+
+        /* HERO */
+        .hero { background: #1c1007; color: white; padding: 56px 20px 48px; text-align: center; }
+        .hero h1 { font-size: 2.2rem; font-weight: 900; line-height: 1.2; margin-bottom: 16px; }
+        .hero h1 span { color: #f59e0b; }
+        .hero p { font-size: 1.05rem; color: #d6d3d1; max-width: 500px; margin: 0 auto 28px; }
+        .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary { background: var(--color); color: white; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1rem; }
+        .btn-secondary { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.3); padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem; }
+
+        /* GALLERY */
+        .gallery { padding: 56px 0; background: #fafaf9; }
+        .section-title { font-size: 1.6rem; font-weight: 800; text-align: center; margin-bottom: 8px; }
+        .section-sub { text-align: center; color: #6b7280; margin-bottom: 32px; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .gallery-grid img {
+            width: 100%; height: 220px; object-fit: cover;
+            border-radius: 10px; cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .gallery-grid img:hover { transform: scale(1.02); }
+        .gallery-grid img:first-child { grid-column: span 2; height: 280px; }
+
+        /* ABOUT */
+        .about { padding: 56px 0; background: white; }
+        .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .about-text h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 16px; }
+        .about-text p { color: #4b5563; margin-bottom: 12px; }
+        .about-badge { display: inline-block; background: var(--color-light); color: var(--color-dark); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin: 4px 4px 0 0; }
+
+        /* CATEGORIES */
+        .categories { padding: 56px 0; background: #fafaf9; }
+        .cat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        .cat-card { background: white; border-radius: 12px; padding: 24px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .cat-icon { font-size: 2.2rem; margin-bottom: 10px; }
+        .cat-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+        .cat-card p { font-size: 0.85rem; color: #6b7280; }
+
+        /* CTA */
+        .cta { background: #1c1007; color: white; padding: 56px 20px; text-align: center; }
+        .cta h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 12px; }
+        .cta p { color: #d6d3d1; margin-bottom: 28px; }
+        .cta-phone { font-size: 1.6rem; font-weight: 800; color: #f59e0b; text-decoration: none; display: block; margin-bottom: 8px; }
+        .cta-note { font-size: 0.85rem; color: #a8a29e; }
+
+        /* FOOTER */
+        footer { background: #111; color: #6b7280; text-align: center; padding: 20px; font-size: 0.8rem; }
+        footer a { color: #f59e0b; text-decoration: none; }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.6rem; }
+            .about-inner { grid-template-columns: 1fr; }
+            .cat-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/" class="nav-brand">🔨 Бардачок</a>
+    <a href="https://wa.me/79000000000" class="nav-cta">Заказать</a>
+</nav>
+
+<section class="hero">
+    <div class="container">
+        <h1>Кожевенное ремесло<br><span>Бардачок</span></h1>
+        <p>Изделия из натуральной кожи ручной работы. Кошельки, сумки, ремни и аксессуары — на заказ и в наличии.</p>
+        <div class="hero-btns">
+            <a href="https://wa.me/79000000000" class="btn-primary">💬 Написать в WhatsApp</a>
+            <a href="#gallery" class="btn-secondary">Посмотреть работы</a>
+        </div>
+    </div>
+</section>
+
+<section class="gallery" id="gallery">
+    <div class="container">
+        <h2 class="section-title">Наши работы</h2>
+        <p class="section-sub">Каждое изделие сделано вручную из натуральной кожи</p>
+        <div class="gallery-grid">
+            <img src="photos/photo1.jpg" alt="Кожаная сумка ручной работы">
+            <img src="photos/photo2.jpg" alt="Кожаный рюкзак">
+            <img src="photos/photo3.jpg" alt="Кожаные аксессуары">
+            <img src="photos/photo4.jpg" alt="Кожаный ремень">
+            <img src="photos/photo5.jpg" alt="Кожаный кошелёк">
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <div class="container">
+        <div class="about-inner">
+            <div class="about-text">
+                <h2>О мастерской</h2>
+                <p>«Бардачок» — мастерская кожевенного ремесла. Каждое изделие изготавливается вручную из натуральной растительно-дублёной кожи.</p>
+                <p>Работаем с 2018 года. Принимаем индивидуальные заказы — сделаем по вашим размерам и пожеланиям.</p>
+                <div>
+                    <span class="about-badge">Натуральная кожа</span>
+                    <span class="about-badge">Ручная работа</span>
+                    <span class="about-badge">На заказ</span>
+                    <span class="about-badge">Гравировка</span>
+                </div>
+            </div>
+            <div>
+                <img src="photos/photo3.jpg" alt="Мастерская" style="width:100%;border-radius:12px;object-fit:cover;height:260px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="categories">
+    <div class="container">
+        <h2 class="section-title">Что делаем</h2>
+        <p class="section-sub">Широкий ассортимент изделий из кожи</p>
+        <div class="cat-grid">
+            <div class="cat-card">
+                <div class="cat-icon">👜</div>
+                <h3>Сумки и рюкзаки</h3>
+                <p>Женские и мужские сумки, рюкзаки, поясные сумки</p>
+            </div>
+            <div class="cat-card">
+                <div class="cat-icon">👛</div>
+                <h3>Кошельки</h3>
+                <p>Бумажники, картхолдеры, портмоне на молнии</p>
+            </div>
+            <div class="cat-card">
+                <div class="cat-icon">⌚</div>
+                <h3>Ремни и браслеты</h3>
+                <p>Ремни под любой размер, браслеты с пряжкой</p>
+            </div>
+            <div class="cat-card">
+                <div class="cat-icon">🔑</div>
+                <h3>Аксессуары</h3>
+                <p>Ключницы, обложки для документов, брелоки</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Хотите такое изделие?</h2>
+        <p>Напишите нам — обсудим детали и сделаем на заказ</p>
+        <a href="tel:+79000000000" class="cta-phone">+7 (900) 000-00-00</a>
+        <a href="https://wa.me/79000000000" class="btn-primary" style="display:inline-block;margin-top:16px;">💬 Написать в WhatsApp</a>
+        <p class="cta-note" style="margin-top:16px;">Срок изготовления: 3–14 дней в зависимости от изделия</p>
+    </div>
+</section>
+
+<footer>
+    <p>Кожевенное Ремесло Бардачок · Сделано в <a href="https://sitebystro.ru">СайтБыстро</a></p>
+</footer>
+
+</body>
+</html>
